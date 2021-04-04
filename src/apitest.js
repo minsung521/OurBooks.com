@@ -39,8 +39,6 @@ class Apitest extends React.Component {
 
 	getBooks = async () => {
 		const bestSeller = await client.get("/v3/search/book", { params });
-		console.log(bestSeller);
-		console.log("3");
 	};
 	componentDidMount() {
 		console.log("1");
