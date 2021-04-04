@@ -1,9 +1,10 @@
 import "./App.css";
-import Apitest from "./apitest";
+import NavBar from "./components/navBar/NavBar.js";
+
 function App() {
 	return (
 		<div className="App">
-			<Apitest />
+			<NavBar />
 		</div>
 	);
 }
