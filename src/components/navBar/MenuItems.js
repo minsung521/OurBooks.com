@@ -12,7 +12,7 @@ export const MenuItems = [
 	},
 
 	{
-		title: "검색",
+		title: "도서순위",
 		url: "#",
 		cName: "nav-links",
 	},

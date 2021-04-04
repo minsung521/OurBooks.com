@@ -11,7 +11,8 @@ class NavBar extends React.Component {
 		return (
 			<nav className="NavBarItems">
 				<h1 className="navbar-logo">
-					OurBooks - 당신의 독서 도우미 <i className="fas fa-book-open"></i>
+					OurBooks <span className="subtitle">- 당신의 독서 도우미</span>
+					<i className="fas fa-book-open"></i>
 				</h1>
 				<div className="menu-icon" onClick={this.handleClick}>
 					<i

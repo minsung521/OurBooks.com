@@ -98,6 +98,9 @@
 		left: 0;
 		transform: translate(25%, 50%);
 	}
+	.subtitle {
+		display: none;
+	}
 	.menu-icon {
 		display: block;
 		position: absolute;
