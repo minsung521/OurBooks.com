@@ -5,7 +5,7 @@ import Search from "./components/search/Search.js";
 class Main extends React.Component {
 	render() {
 		return (
-			<div>
+			<div className="mainstyle">
 				<Search />
 			</div>
 		);

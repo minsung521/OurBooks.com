@@ -1,0 +1,30 @@
+.boxWrapper {
+	display: flex;
+
+	width: 99%;
+	justify-items: center;
+}
+
+.infoBox {
+	text-align: left;
+	background-color: #ecf0f6;
+	width: 99%;
+	height: 15%;
+	box-shadow: 2px 2px 2px grey;
+	margin: 10px 30px;
+	border-radius: 10px;
+}
+
+.imageContainer {
+	display: inline;
+	text-align: left;
+}
+
+.thumbnail {
+	margin: 1em;
+	margin-bottom: 3em;
+	box-shadow: 3px 4px 4px grey;
+}
+.title {
+	margin-left: 40%;
+}
