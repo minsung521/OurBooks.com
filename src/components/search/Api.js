@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
+import { useDebouncedCallback } from "use-debounce";
 import axios from "axios";
 import ABook from "./ABook.js";
 
@@ -9,42 +10,68 @@ const kakao = axios.create({
 	},
 });
 
-class Api extends React.Component {
-	constructor(props) {
-		super(props);
-		this.state = {
-			isJsonLoaded: false,
-			params: {
-				query: props.query,
-				sort: props.sort, //accuracy(정확도순) 또는 latest(발간일순), 기본값 accuracy
-				page: props.page, //Integer	결과 페이지 번호, 1~50 사이의 값, 기본 값 1
-				size: props.size, //	한 페이지에 보여질 문서 수, 1~50 사이의 값, 기본 값 10
-				target: props.target, //title(제목), isbn (ISBN), publisher(출판사), person(인명)
-			},
-			booksInfo: [],
-		};
-	}
-	getBooks = async (params) => {
+const Api = ({ params }) => {
+	const [booksInfo, setBooksInfo] = useState([]);
+	const previousQuery = useRef("");
+
+	const getBooks = useDebouncedCallback(async (params) => {
 		const booksInfo = await kakao.get("/v3/search/book", { params });
 		console.log(booksInfo.data.documents);
-		const documents = booksInfo.data.documents;
-		this.setState({ isJsonLoaded: true, booksInfo: documents });
-	};
-	componentDidMount() {
-		const { params } = this.state;
-		this.getBooks(params);
-	}
-	render() {
-		const { booksInfo } = this.state;
-		//return <h1>Apitest - {isJsonLoaded ? "Loaded!" : "Wait a second..."}</h1>;
-		return (
-			<div className="apiSection">
-				{booksInfo.map((book, index) => {
-					return <ABook key={index} id={index} bookInfo={book} />;
-				})}
-			</div>
-		);
-	}
-}
+		const { documents } = booksInfo.data;
+		setBooksInfo(documents);
+	}, 1000);
+
+	useEffect(() => {
+		if (previousQuery.current !== params.query && params.query != "") {
+			getBooks(params);
+			previousQuery.current = params.query;
+		}
+	}, [params, previousQuery, getBooks]);
+
+	return (
+		<div className="apiSection">
+			{booksInfo.map((book, index) => {
+				return <ABook key={index} id={index} bookInfo={book} />;
+			})}
+		</div>
+	);
+};
+
+// class Api extends React.Component {
+// 	constructor(props) {
+// 		super(props);
+// 		this.state = {
+// 			isJsonLoaded: false,
+// 			booksInfo: [],
+// 		};
+// 	}
+// 	getBooks = async (params) => {
+// 		const booksInfo = await kakao.get("/v3/search/book", { params });
+// 		console.log(booksInfo.data.documents);
+// 		const documents = booksInfo.data.documents;
+// 		this.setState({ isJsonLoaded: true, booksInfo: documents });
+// 	};
+// 	shouldComponentUpdate(nextProps, nextState) {
+// 		if (this.props.params.query !== nextProps.params.query) {
+// 			const { params } = nextProps;
+// 			console.log(params);
+// 			this.getBooks(params);
+// 		}
+
+// 		return true;
+// 	}
+// 	render() {
+// 		const { booksInfo } = this.state;
+// 		//return <h1>Apitest - {isJsonLoaded ? "Loaded!" : "Wait a second..."}</h1>;
+// 		return (
+// 			<div className="apiSection">
+// 				{booksInfo.map((book, index) => {
+// 					return <ABook key={index} id={index} bookInfo={book} />;
+// 				})}
+// 				{/* {query} */}
+// 			</div>
+// 		);
+// 	}
+// }
 
 export default Api;

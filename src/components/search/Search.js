@@ -1,5 +1,5 @@
 import React from "react";
-import Api from "./Api.js";
+import Api from "./Api";
 import "./Search.css";
 //파라미터 입력부분 만들예정
 class Search extends React.Component {
@@ -9,25 +9,39 @@ class Search extends React.Component {
 		this.handleSubmit = this.handleSubmit.bind(this);
 		this.state = {
 			answerIn: false,
-			query: "고양이",
-			// value: {
-			// 	sort: "accuracy",
-			// 	page: 1,
-			// 	size: 30,
-			// 	target: "title",
-			// },
+			query: "",
+			params: {
+				query: "",
+				sort: "accuracy",
+				page: 1,
+				size: 30,
+				target: "title",
+			},
 		};
 	}
 	handleChange(event) {
-		this.setState({ query: event.target.value });
-		console.log(this.state.value);
+		this.setState((preventState) => ({
+			params: {
+				...preventState.params,
+				query: event.target.value,
+			},
+			query: event.target.value,
+		}));
+		// this.setState({ query: event.target.value });
+		// console.log(this.state.value);
 	}
 	handleSubmit(event) {
-		alert("A name was submitted: " + this.state.value);
+		alert("A name was submitted: " + this.state.query);
+		this.setState((preventState) => ({
+			params: {
+				...preventState.params,
+				query: this.state.query,
+			},
+		}));
 		event.preventDefault();
 	}
 	render() {
-		const { value, query } = this.state;
+		const { params, query } = this.state;
 		return (
 			<div className="searchbig">
 				<div className="searchSection">
@@ -39,7 +53,7 @@ class Search extends React.Component {
 									class="searchTerm"
 									placeholder="검색어 입력"
 									onChange={this.handleChange}
-								></input>
+								/>
 								<button type="submit" class="searchButton">
 									<i class="fa fa-search"></i>
 								</button>
@@ -48,13 +62,7 @@ class Search extends React.Component {
 					</div>
 				</div>
 				<div className="resultsSection">
-					<Api
-						query={`${query}`}
-						// sort={"accuracy"}
-						// page={1}
-						// size={30}
-						// target={"title"}
-					/>
+					<Api params={params} />
 				</div>
 			</div>
 		);
