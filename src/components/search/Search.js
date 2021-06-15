@@ -31,7 +31,7 @@ class Search extends React.Component {
 		// console.log(this.state.value);
 	}
 	handleSubmit(event) {
-		alert("A name was submitted: " + this.state.query);
+		// alert("A name was submitted: " + this.state.query);
 		this.setState((preventState) => ({
 			params: {
 				...preventState.params,

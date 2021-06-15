@@ -7,9 +7,9 @@ class ABook extends React.Component {
 		const book = this.props.bookInfo;
 		return (
 			<div className="boxWrapper">
-				<div className="infoBox">
+				<img className="thumbnail" src={book.thumbnail} alt="a"></img>
+				<div className="text">
 					<h2 className="title">{book.title}</h2>
-					<img className="thumbnail" src={book.thumbnail} alt="a"></img>
 					<span className="content">{book.contents}</span>
 				</div>
 			</div>
