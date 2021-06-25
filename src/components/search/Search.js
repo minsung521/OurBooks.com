@@ -41,25 +41,21 @@ class Search extends React.Component {
 		event.preventDefault();
 	}
 	render() {
-		const { params, query } = this.state;
+		const { params } = this.state;
 		return (
-			<div className="searchbig">
-				<div className="searchSection">
-					<div class="wrap">
-						<div class="search">
-							<form onSubmit={this.handleSubmit}>
-								<input
-									type="text"
-									class="searchTerm"
-									placeholder="검색어 입력"
-									onChange={this.handleChange}
-								/>
-								<button type="submit" class="searchButton">
-									<i class="fa fa-search"></i>
-								</button>
-							</form>
-						</div>
-					</div>
+			<div class="wrap">
+				<div class="search">
+					<form onSubmit={this.handleSubmit}>
+						<input
+							type="text"
+							class="searchTerm"
+							placeholder="검색어 입력"
+							onChange={this.handleChange}
+						/>
+						<button type="submit" class="searchButton">
+							<i class="fa fa-search"></i>
+						</button>
+					</form>
 				</div>
 				<div className="resultsSection">
 					<Api params={params} />

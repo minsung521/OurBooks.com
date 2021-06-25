@@ -22,7 +22,7 @@ const Api = ({ params }) => {
 	}, 1000);
 
 	useEffect(() => {
-		if (previousQuery.current !== params.query && params.query != "") {
+		if (previousQuery.current !== params.query && params.query !== "") {
 			getBooks(params);
 			previousQuery.current = params.query;
 		}
