@@ -43,17 +43,17 @@ class Search extends React.Component {
 	render() {
 		const { params } = this.state;
 		return (
-			<div class="wrap">
-				<div class="search">
+			<div className="wrap">
+				<div className="search">
 					<form onSubmit={this.handleSubmit}>
 						<input
 							type="text"
-							class="searchTerm"
+							className="searchIn"
 							placeholder="검색어 입력"
 							onChange={this.handleChange}
 						/>
-						<button type="submit" class="searchButton">
-							<i class="fa fa-search"></i>
+						<button type="submit" className="searchButton">
+							<i className="fa fa-search"></i>
 						</button>
 					</form>
 				</div>

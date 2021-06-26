@@ -12,16 +12,15 @@
 	display: grid;
 }
 
-.searchTerm {
-	width: 90%;
+.searchIn {
 	border: 3px solid #00b4cc;
-	border-right: none;
-	padding: 5px;
-	height: 50px;
-	border-radius: 5px 0 0 5px;
+	border-right: 0px;
+	border-radius: 16px 0px 0px 16px;
+	padding: 10px;
 	outline: none;
 	color: #9dbfaf;
-	font-size: large;
+	height: 48px;
+	width: 32vw;
 }
 
 .searchTerm:focus {
@@ -29,13 +28,12 @@
 }
 
 .searchButton {
-	width: 50px;
-	height: 50px;
 	border: 1px solid #00b4cc;
 	background: #00b4cc;
 	text-align: center;
 	color: #fff;
-	border-radius: 0 5px 5px 0;
 	cursor: pointer;
-	font-size: 20px;
+	border-radius: 0px 16px 16px 0px;
+	width: 48px;
+	height: 48px;
 }
