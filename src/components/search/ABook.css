@@ -13,12 +13,14 @@
 .thumbnail {
 	float: left;
 	margin: 1em;
-	margin-bottom: 3em;
 	box-shadow: 3px 4px 4px grey;
+	vertical-align: middle;
 }
 .text {
 	margin: 20px;
+	text-align: start;
 }
 .title {
-	margin-bottom: 1em;
+	margin-bottom: 0.3em;
+	text-align: start;
 }

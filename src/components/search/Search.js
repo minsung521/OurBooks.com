@@ -9,7 +9,6 @@ class Search extends React.Component {
 		this.handleSubmit = this.handleSubmit.bind(this);
 		this.state = {
 			answerIn: false,
-			query: "",
 			params: {
 				query: "",
 				sort: "accuracy",
@@ -31,13 +30,13 @@ class Search extends React.Component {
 		// console.log(this.state.value);
 	}
 	handleSubmit(event) {
-		// alert("A name was submitted: " + this.state.query);
 		this.setState((preventState) => ({
 			params: {
 				...preventState.params,
-				query: this.state.query,
+				query: event.target[0].value,
 			},
 		}));
+		console.log(event.target[0].value);
 		event.preventDefault();
 	}
 	render() {
@@ -49,8 +48,9 @@ class Search extends React.Component {
 						<input
 							type="text"
 							className="searchIn"
+							name="textInPut"
 							placeholder="검색어 입력"
-							onChange={this.handleChange}
+							// onChange={this.handleChange}
 						/>
 						<button type="submit" className="searchButton">
 							<i className="fa fa-search"></i>

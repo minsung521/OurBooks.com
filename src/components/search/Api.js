@@ -19,7 +19,7 @@ const Api = ({ params }) => {
 		console.log(booksInfo.data.documents);
 		const { documents } = booksInfo.data;
 		setBooksInfo(documents);
-	}, 1000);
+	}, 0);
 
 	useEffect(() => {
 		if (previousQuery.current !== params.query && params.query !== "") {

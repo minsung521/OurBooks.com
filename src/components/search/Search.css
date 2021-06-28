@@ -13,27 +13,30 @@
 }
 
 .searchIn {
-	border: 3px solid #00b4cc;
+	border: 3px solid #6774ff;
 	border-right: 0px;
-	border-radius: 16px 0px 0px 16px;
-	padding: 10px;
+	border-radius: 20px 0px 0px 20px;
+	padding: 20px;
 	outline: none;
-	color: #9dbfaf;
-	height: 48px;
+	color: #6774ff;
+	height: 60px;
 	width: 32vw;
+	font-size: larger;
+	font-weight: bold;
 }
 
-.searchTerm:focus {
-	color: #00b4cc;
+.searchIn:focus {
+	color: #96a0ff;
 }
 
 .searchButton {
-	border: 1px solid #00b4cc;
-	background: #00b4cc;
+	border: 1px solid #6774ff;
+	background: #6774ff;
 	text-align: center;
 	color: #fff;
 	cursor: pointer;
-	border-radius: 0px 16px 16px 0px;
-	width: 48px;
-	height: 48px;
+	border-radius: 0px 20px 20px 0px;
+	width: 60px;
+	height: 60px;
+	font-size: larger;
 }
