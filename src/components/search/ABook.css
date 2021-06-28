@@ -1,6 +1,7 @@
 .boxWrapper {
+	border: 2px solid darkblue;
 	display: flex;
-	background-color: #ecf0f6;
+	background-color: ivory;
 	border-radius: 10px;
 	margin: 10px 30px;
 }
@@ -15,12 +16,15 @@
 	margin: 1em;
 	box-shadow: 3px 4px 4px grey;
 	vertical-align: middle;
+	border-radius: 2px;
 }
 .text {
 	margin: 20px;
 	text-align: start;
+	font-weight: 500;
 }
 .title {
 	margin-bottom: 0.3em;
 	text-align: start;
+	padding-left: 0%;
 }

@@ -1,6 +1,8 @@
 import React from "react";
 import Api from "./Api";
 import "./Search.css";
+import Options from "./Options";
+
 //파라미터 입력부분 만들예정
 class Search extends React.Component {
 	constructor(props) {
@@ -42,24 +44,27 @@ class Search extends React.Component {
 	render() {
 		const { params } = this.state;
 		return (
-			<div className="wrap">
-				<div className="search">
-					<form onSubmit={this.handleSubmit}>
-						<input
-							type="text"
-							className="searchIn"
-							name="textInPut"
-							placeholder="검색어 입력"
-							// onChange={this.handleChange}
-						/>
-						<button type="submit" className="searchButton">
-							<i className="fa fa-search"></i>
-						</button>
-					</form>
+			<div className="row_wrapper">
+				<div className="wrap">
+					<div className="search">
+						<form onSubmit={this.handleSubmit}>
+							<input
+								type="text"
+								className="searchIn"
+								name="textInPut"
+								placeholder="검색어 입력"
+								// onChange={this.handleChange}
+							/>
+							<button type="submit" className="searchButton">
+								<i className="fa fa-search"></i>
+							</button>
+						</form>
+					</div>
+					<div className="resultsSection">
+						<Api params={params} />
+					</div>
 				</div>
-				<div className="resultsSection">
-					<Api params={params} />
-				</div>
+				<Options />
 			</div>
 		);
 	}
