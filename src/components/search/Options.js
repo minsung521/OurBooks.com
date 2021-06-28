@@ -6,13 +6,16 @@ const Options = ({}) => {
 	return (
 		<div className="options_container">
 			<form>
-				<input list="sort" placeholder="accracy"></input>
+				<select name="sort">
+					<option value="accuracy">정확도순</option>
+					<option value="recency">최신순</option>
+				</select>
+				<input type="checkbox" name="title" value="title"></input>
+				<input type="checkbox" name="isbn" value="isbn"></input>
+				<input type="checkbox" name="publisher" value="publisher"></input>
+				<input type="checkbox" name="person" value="person"></input>
+				<input type="submit" className="optionSubmit"></input>
 			</form>
-			<datalist id="sort">
-				<option>accuracy</option>
-				<option>latest</option>
-				<option>recency</option>
-			</datalist>
 		</div>
 	);
 };
