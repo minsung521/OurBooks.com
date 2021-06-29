@@ -15,7 +15,7 @@ class Search extends React.Component {
 				query: "",
 				sort: "accuracy",
 				page: 1,
-				size: 30,
+				size: 50,
 				target: "title",
 			},
 		};

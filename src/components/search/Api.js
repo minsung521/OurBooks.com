@@ -33,6 +33,7 @@ const Api = ({ params }) => {
 			{booksInfo.map((book, index) => {
 				return <ABook key={index} id={index} bookInfo={book} />;
 			})}
+			<div className="response_pgcontrol"></div>
 		</div>
 	);
 };
