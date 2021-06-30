@@ -7,19 +7,19 @@ export const MenuItems = [
 
 	{
 		title: "만든이",
-		url: "#",
+		url: "/whomadethis",
 		cName: "nav-links",
 	},
 
 	{
 		title: "도서순위",
-		url: "#",
+		url: "/rank",
 		cName: "nav-links",
 	},
 
 	{
 		title: "이용방법",
-		url: "#",
+		url: "/howtouse",
 		cName: "nav-links",
 	},
 ];

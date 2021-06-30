@@ -11,6 +11,10 @@
 	font-size: 1.2rem;
 }
 
+.titlelink {
+	text-decoration: none;
+}
+
 .navbar-logo {
 	color: #fff;
 	justify-self: start;

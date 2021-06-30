@@ -10,10 +10,12 @@ class NavBar extends React.Component {
 	render() {
 		return (
 			<nav className="NavBarItems">
-				<h1 className="navbar-logo">
-					OurBooks <span className="subtitle">- 당신의 독서 도우미</span>
-					<i className="fas fa-book-open"></i>
-				</h1>
+				<a className="titlelink" href="/">
+					<h1 className="navbar-logo">
+						OurBooks <span className="subtitle">- 당신의 독서 도우미</span>
+						<i className="fas fa-book-open"></i>
+					</h1>
+				</a>
 				<div className="menu-icon" onClick={this.handleClick}>
 					<i
 						className={this.state.isClicked ? "fas fa-times" : "fas fa-bars"}
