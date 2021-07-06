@@ -1,33 +1,23 @@
-# Getting Started with Create React App
+# OURBOOKS
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+사용자 맞춤형 독서 지원 사이트
 
-## Available Scripts
+## features
 
-In the project directory, you can run:
+구현된/구현예정인 기능들입니다
 
-### `npm start`
+### 도서별 정보 페이지
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+각 도서의 평점, 가격, 구매링크, 리뷰, 평점, 세부정도 등을 보여줍니다.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### 사용자 맞춤 도서 추천
 
-### `npm test`
+사용자가 감명깊게/만족스럽게 읽은 책들을 입력, 저장하고
+tensorflow 를 활용해 사용자에게 맞는 도서들을 추천합니다
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 도서 카테고리 별 종합순위
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+여러 도서사이트들의 카테고리별 순위를 종합하여 보여줍니다.
 
 ### `npm run eject`
 
@@ -41,30 +31,5 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 
 ## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+website(heroku) : https://ourbooks-it.herokuapp.com/
+instagram : https://www.instagram.com/mingsung_521/
