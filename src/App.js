@@ -4,19 +4,21 @@ import NavBar from "./components/navBar/NavBar.js";
 import HowToUse from "./HowToUse";
 import WhoMadeThis from "./WhoMadeThis";
 import Rank from "./Rank";
-import { Route, BrowserRouter as Router, Switch } from "react-router-dom";
+import { Route, Switch, BrowserRouter as Router } from "react-router-dom";
 
 function App() {
 	return (
-		<Router>
-			<div className="App">
+		<div className="App">
+			<Router>
 				<NavBar />
-				<Route path="/" component={Home} exact />
-				<Route path="/howtouse" component={HowToUse} />
-				<Route path="/whomadethis" component={WhoMadeThis} />
-				<Route path="/rank" component={Rank} />
-			</div>
-		</Router>
+				<Switch>
+					<Route path="/" exact component={Home} />
+					<Route path="/howtouse" component={HowToUse} />
+					<Route path="/whomadethis" component={WhoMadeThis} />
+					<Route path="/rank" component={Rank} />
+				</Switch>
+			</Router>
+		</div>
 	);
 }
 

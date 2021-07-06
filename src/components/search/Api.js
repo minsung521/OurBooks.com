@@ -10,12 +10,17 @@ const kakao = axios.create({
 	},
 });
 
+const isEmptyObject = (param) => {
+	return Object.keys(param).length === 0;
+};
+
 const Api = ({ params }) => {
 	const [booksInfo, setBooksInfo] = useState([]);
 	const previousQuery = useRef("");
 
 	const getBooks = useDebouncedCallback(async (params) => {
 		const booksInfo = await kakao.get("/v3/search/book", { params });
+		console.log(isEmptyObject(booksInfo.data.documents));
 		console.log(booksInfo.data.documents);
 		const { documents } = booksInfo.data;
 		setBooksInfo(documents);
