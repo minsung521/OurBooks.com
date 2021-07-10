@@ -7,3 +7,35 @@
 	border-radius: 20px;
 	padding: 2em;
 }
+
+.checkboxcontainer {
+	display: flex;
+	justify-content: space-around;
+	margin: 2em 0em;
+}
+
+select[name="sort"] {
+	height: 36px;
+	width: 144px;
+	border: 2px teal solid;
+	border-radius: 12px;
+	font-weight: bold;
+	font-size: large;
+}
+
+input[type="checkbox"] {
+	margin-top: 20px;
+	transform: scale(2);
+}
+.checkboxtitle {
+	font-weight: bold;
+	font-size: large;
+}
+.optionSubmit {
+	border: 2px teal solid;
+	border-radius: 12px;
+	width: 200px;
+	height: 36px;
+	font-weight: bold;
+	font-size: large;
+}

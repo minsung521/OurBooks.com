@@ -20,10 +20,12 @@ const Api = ({ params }) => {
 
 	const getBooks = useDebouncedCallback(async (params) => {
 		const booksInfo = await kakao.get("/v3/search/book", { params });
-		console.log(isEmptyObject(booksInfo.data.documents));
 		console.log(booksInfo.data.documents);
 		const { documents } = booksInfo.data;
-		setBooksInfo(documents);
+		if (isEmptyObject(booksInfo.data.documents)) {
+		} else {
+			setBooksInfo(documents);
+		}
 	}, 0);
 
 	useEffect(() => {
