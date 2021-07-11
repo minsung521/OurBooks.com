@@ -1,7 +1,6 @@
 import React from "react";
 import "./ABook.css";
 import ErrorImg from "./images/imgERR.png";
-//책 한권의 정보를 담은 컴포넌트
 
 class ABook extends React.Component {
 	render() {
