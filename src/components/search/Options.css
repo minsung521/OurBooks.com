@@ -32,6 +32,7 @@ input[type="checkbox"] {
 	font-size: large;
 }
 .optionSubmit {
+	margin-top: 6.5em;
 	border: 2px teal solid;
 	border-radius: 12px;
 	width: 200px;
