@@ -10,6 +10,7 @@
 
 .checkboxcontainer {
 	display: flex;
+	left: auto;
 	justify-content: space-around;
 	margin: 2em 0em;
 }
