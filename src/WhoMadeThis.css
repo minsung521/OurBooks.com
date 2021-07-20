@@ -3,10 +3,8 @@ h1 {
 }
 
 .profileImg {
-	border-radius: 30px;
+	border-radius: 16rem;
 	height: 16rem;
 	width: 16rem;
 	object-fit: cover;
-	/* position: absolute;
-  left: ; */
 }
