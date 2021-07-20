@@ -1,10 +1,14 @@
 import React from "react";
+import profileImg from "./myprofile.jpg";
+import "./WhoMadeThis.css";
 
 const WhoMadeThis = () => {
 	return (
 		<div>
-			<h1>개발자 프로필 - 추가 될 예정입니다</h1>
-			{/* 인스타 그램 api - proxy or native */}
+			<h1>개발자 프로필</h1>
+			<div className="profile">
+				<img src={profileImg} alt="Developer profile" className="profileImg" />
+			</div>
 		</div>
 	);
 };

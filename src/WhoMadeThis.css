@@ -1,0 +1,12 @@
+h1 {
+	margin: 30px;
+}
+
+.profileImg {
+	border-radius: 30px;
+	height: 16rem;
+	width: 16rem;
+	object-fit: cover;
+	/* position: absolute;
+  left: ; */
+}
